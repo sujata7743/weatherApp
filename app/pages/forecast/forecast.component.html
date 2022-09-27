@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+
+<body>
+   <!-- main container start -->
+   <div class="banner">
+      <div class="container-fluid">
+         <div class="center">
+            <label class="city"> Select City
+               <select class="form-control" id="ccyear" (change)="getCityData($any($event.target).value)">
+                  <option *ngFor="let cityName of cityArray" value="{{cityName}}">{{cityName}}</option>
+               </select>
+            </label>
+         </div>
+      </div>
+     
+      <!-- main container end -->
+
+      <!-- step -->
+      <div class="container mt-5 mb-5">
+         <h1 class="text-center">Current City <span class="heighlight">Weather Details</span></h1>
+         <div class="row mt-5">
+
+            <!-- Humidity Start-->
+            <div class="col-lg-3 mt-2">
+               <div class="stepBox">
+                  <h3>Humidity</h3>{{humidity}}
+               </div>
+            </div>
+            <!-- Humidity End-->
+
+            <!-- Pressure Start -->
+            <div class="col-lg-3 mt-2">
+               <div class="stepBox">
+                  <h3>Pressure</h3>{{pressure}}
+               </div>
+            </div>
+            <!-- Pressure End -->
+
+            <!-- Visibility Start -->
+            <div class="col-lg-3 mt-2">
+               <div class="stepBox">
+                  <h3>Visibility</h3>{{visibility}}
+               </div>
+            </div>
+            <!-- Visibility End -->
+
+            <!-- Temperature Start -->
+            <div class="col-lg-3 mt-2">
+               <div class="stepBox">
+                  <h3>Temperature</h3>{{temperature}} in K
+               </div>
+            </div>
+            <!-- Temperature End -->
+         </div>
+      </div>
+   </div>
+      <!-- design Start -->
+      <div class=" container">
+         <div class="design text-center mt-4">
+            <h1 class="format mb-4">Weather Format</h1>
+            <p>Temperature in Degrees Celsius</p>
+            <p>Temperature in Degrees Farenheit</p>
+            <p>Feels like in Degrees Celsius</p>
+            <p>Temperature in Degrees Farenheit</p>
+         </div>
+      </div>
+      
+
+</body>
+
+</html>

@@ -1,0 +1,13 @@
+
+
+.navbar-light .navbar-nav .nav-link{
+  
+    color: rgb(33, 34, 33);
+   
+    
+}
+.navbar-light .navbar-nav .nav-link.active-link:hover{
+    color: rgb(33, 34, 33);
+    text-decoration: underline;
+    font-weight: bold;
+}
